@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "PlaneCrash";
+    src: url("fonts/PlaneCrash.ttf") format("truetype");
+}
+@font-face {
+    font-family: "danube";
+    src: url("fonts/danube.ttf") format("truetype");
+}
+
+.hidden {
+    -webkit-transition: opacity 1s;
+    z-index: 0;
+    opacity: 0;
+}
+
+.visible {
+    -webkit-transition: opacity 1s;
+    z-index: 1;
+    opacity: 1;
+}
+
+.frame {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    font-family: "danube";
+    color: white;
+    text-shadow: 0px 0px 20px #008080;
+    -webkit-user-select: none;
+    font-size: 25px;
+}
+    .frame button {
+        -webkit-transition: border-radius 1s, text-shadow 1s, color 1s;
+        font-family: "danube";
+        font-size: 30px;
+        color: #EEE;
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+        background: none;
+        text-shadow: 0px 0px 8px white;
+        border: 1px solid #dedede;
+        border-radius: 3px;
+        text-decoration: none;
+        border-color: #8dc5da #76b7cf #63abc7;
+        box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.5);
+    }
+
+        .frame button:hover {
+            border-radius: 20px;
+            text-shadow: 0px 0px 50px white;
+            color: white;
+        }
+
+        .frame button:active {
+            text-shadow: 0px 0px 20px #00FF00;
+        }
+
+body {
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 0px;
+    background-image: url('img/back1.jpg');
+}
+div {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+canvas {
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    position: absolute;
+}
+#title {
+    -webkit-transform: rotateZ(-5deg);
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-box-reflect: below -10px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.6)));
+    -webkit-transform-origin: 0% 100%;
+    font-family: "PlaneCrash";
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-size: 3em;
+    color: red;
+    text-shadow: 0px 0px 40px white;
+}
+    #title:hover {
+        -webkit-transform: rotateZ(5deg);
+    }
+#fps {
+    -webkit-transition: border-radius 1s, text-shadow 1s, color 1s;
+    font-family: "danube";
+    font-size: 10px;
+    color: #EEE;
+    background: none;
+    text-align: left;
+    text-decoration: none;
+    border-color: #8dc5da #76b7cf #63abc7;
+}
+#score {
+    -webkit-transition: border-radius 1s, text-shadow 1s, color 1s;
+    font-family: "danube";
+    font-size: 10px;
+    color: #EEE;
+    background: none;
+    text-align: left;
+    text-decoration: none;
+    border-color: #8dc5da #76b7cf #63abc7;
+}
+img {
+    float: right;
+}
+

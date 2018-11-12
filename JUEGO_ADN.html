@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Amino acid</title>
+        <link rel="stylesheet" type="text/css" href="DJuego.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+        <script src="Juego.js"></script>   
+	</head>
+        <noscript>
+            No tiene habilitado JavaScript. Debería habilitarlo para poder
+            disfrutar al completo de los contenidos de esta página.
+        </noscript>    
+        <img id="imglvl" src="img/fire.png">  
+	<div id="game">
+            <div id="canvas" class="frame hidden">
+                <canvas id="canvasGame">
+                    Tu navegador no soporta el elemento <code>canvas</code> de HTML5.
+                </canvas>
+                <div id="fps" class="frame visible">
+                    FPS: -
+                </div>
+                <br />
+                <div id="score" class="frame visible">
+                    Puntuacio&acute;n: -
+                </div>
+            </div>
+
+			<div id="main" class="frame visible">
+				<h1>
+					Amino acid
+				</h1>
+                <button id="bun1" onclick="document.getElementById('canvas').style.opacity='100';
+    document.getElementById('canvas').style.zIndex = '1';
+    document.getElementById('canvas').style.WebkitTransition = '1s';
+    document.getElementById('canvas').focus();
+    document.getElementById('main').style.opacity='0';
+    document.getElementById('main').style.zIndex = '0';
+    document.getElementById('main').style.WebkitTransition = '0s';
+    document.getElementById('bn').play();">            
+    Jugar                    
+                </button>
+				<button onclick="javascript:
+        document.getElementById('highscores').style.opacity='100'; 
+    document.getElementById('highscores').style.zIndex = '1';
+    document.getElementById('highscores').style.WebkitTransition = '1s';
+    document.getElementById('highscores').focus();
+    document.getElementById('main').style.opacity='0';
+    document.getElementById('main').style.zIndex = '0';
+    document.getElementById('main').style.WebkitTransition = '0s';
+    document.getElementById('bn').play();">                
+    Puntuaciones                    
+				</button>
+                <button onclick="javascript:
+        document.getElementById('controls').style.opacity = '100';
+    document.getElementById('controls').style.zIndex = '1';
+    document.getElementById('controls').style.WebkitTransition = '1s';
+    document.getElementById('controls').focus();
+    document.getElementById('main').style.opacity = '0';
+    document.getElementById('main').style.zIndex = '0';
+    document.getElementById('main').style.WebkitTransition = '0s';
+    document.getElementById('bn').play();">
+    Controles                    
+                </button>
+				<button onclick="javascript:
+        document.getElementById('about').style.opacity='100'; 
+    document.getElementById('about').style.zIndex = '1';
+    document.getElementById('about').style.WebkitTransition = '1s';
+    document.getElementById('about').focus();
+    document.getElementById('main').style.opacity='0';
+    document.getElementById('main').style.zIndex = '0';
+    document.getElementById('main').style.WebkitTransition = '0s';
+    document.getElementById('bn').play();">                
+    Creditos                    
+				</button>
+			</div>
+			
+            <div id="highscores" class="frame hidden">
+                <h2 id="highs">
+                    Puntuacio&acute;n mas alta:
+                </h2>
+                <button onclick="javascript:
+        document.getElementById('main').style.opacity='100';
+    document.getElementById('main').style.zIndex = '1';
+    document.getElementById('main').style.WebkitTransition = '1s';
+    document.getElementById('main').focus();
+    document.getElementById('highscores').style.opacity='0';
+    document.getElementById('highscores').style.zIndex = '0';
+    document.getElementById('highscores').style.WebkitTransition = '0s';
+    document.getElementById('bn').play();">
+                    Volver al menu
+                </button>
+            </div>
+
+            <div id="about" class="frame hidden">
+                <h2>
+                    Jorge Edd Bermu&acute;dez
+                </h2>
+                <a href="">
+                    <video src="intro/Intr.mp4" controls width="520" height="340">
+                        No se puede reproducir vídeo..
+                    </video>
+                </a>  <br />
+                <button onclick="javascript:
+        document.getElementById('main').style.opacity='100';
+    document.getElementById('main').style.zIndex = '1';
+    document.getElementById('main').style.WebkitTransition = '1s';
+    document.getElementById('main').focus();
+    document.getElementById('about').style.opacity='0';
+    document.getElementById('about').style.zIndex = '0';
+    document.getElementById('about').style.WebkitTransition = '0s';
+    document.getElementById('ap').play();">
+                    Volver al menu
+                </button>
+            </div>
+
+            <div id="controls" class="frame hidden">
+                <h2>
+                    Controles
+                </h2> <br />
+                <a href="">
+                    <img src="img/Controles.png" style="width: 400px; height: 200px;" />
+                    <br />
+                    Espacio<img src="img/Espacio.jpg" style="width: 300px; height: 50px;" />
+                </a>
+                <br />
+                <button onclick="javascript:
+        document.getElementById('main').style.opacity='100';
+    document.getElementById('main').style.zIndex = '1';
+    document.getElementById('main').style.WebkitTransition = '1s';
+    document.getElementById('main').focus();
+    document.getElementById('controls').style.opacity='0';
+    document.getElementById('controls').style.zIndex = '0';
+    document.getElementById('controls').style.WebkitTransition = '0s';
+    document.getElementById('bn').play();">                                   
+                    Volver al menu
+                </button>
+            </div>
+
+            <div id="title" class="frame hidden">
+                Amino acid
+                <br />
+                <button id="bn1" onclick="javascript:
+    document.getElementById('main').style.opacity='100';
+    document.getElementById('main').style.zIndex = '1';
+    document.getElementById('main').style.WebkitTransition = '1s';
+    document.getElementById('main').focus();
+    document.getElementById('title').style.opacity='0';
+    document.getElementById('title').style.zIndex = '0';
+    document.getElementById('title').style.WebkitTransition = '0s';
+    document.getElementById('bn').play();">                                  
+                    Volver al menu
+                </button>
+                <br />
+                <button id="bn2" onclick="javascript:
+        document.getElementById('canvas').style.opacity='100';
+    document.getElementById('canvas').style.zIndex = '1';
+    document.getElementById('canvas').style.WebkitTransition = '1s';
+    document.getElementById('canvas').focus();
+    document.getElementById('title').style.opacity='0';
+    document.getElementById('title').style.zIndex = '0';
+    document.getElementById('title').style.WebkitTransition = '0s';
+    document.getElementById('min').play();">                                    
+                    Jugar
+                </button>
+            </div>
+		</div>
+
+        <audio id="l1" src="sounds/lvl1.mp3">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="ap" src="sounds/Aplauso.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="bn" src="sounds/Boton.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="in" src="sounds/Inicio.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="min" src="sounds/Minimizado.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="roj" src="sounds/roja.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="vid" src="sounds/vida.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="mon" src="sounds/moneda.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="colisión" src="sounds/sdie.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="artf" src="sounds/moco.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>
+
+        <audio id="gov" src="sounds/gaover.wav">
+            <p>Tu navegador no implementa el elemento audio</p>
+        </audio>   
+	</body>
+</html>
+
